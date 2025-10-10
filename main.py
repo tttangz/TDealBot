@@ -5,9 +5,9 @@ import time
 # ----------------------
 # 1. 初始化 APIAdapter（完全不关心交易所内部实现）
 # ----------------------
-API_KEY = "bg_9c95b568e303c94288691867695b44e4"
-API_SECRET = "1c008b114f40f20d9c97cc155df7c7d519ab77ae61e8b8e7280f88d28f70c99e"
-PASSPHRASE = "492513492513"
+API_KEY = "xx"
+API_SECRET = "xx"
+PASSPHRASE = "xx"
 TEST = True
 
 adapter_api = APIAdapter(
