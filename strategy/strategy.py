@@ -1,5 +1,5 @@
 import pandas as pd
-from indicators import Indicators
+from indicators.macd import Indicators
 from adapter_api import APIAdapter
 
 class Strategy:

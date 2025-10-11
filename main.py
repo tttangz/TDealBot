@@ -1,6 +1,6 @@
 from adapter_api import APIAdapter
 from bitget_ws import BitgetWebSocket
-from strategy import Strategy
+from strategy.strategy import Strategy
 import time
 # ----------------------
 # 1. 初始化 APIAdapter（完全不关心交易所内部实现）
