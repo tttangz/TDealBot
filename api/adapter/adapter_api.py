@@ -1,4 +1,4 @@
-from bitget_api import BitgetApi
+from api.bitget.bitget_api import BitgetApi
 # 如果将来要接 OKX 或 Binance，可在这里 import 相应类
 
 class APIAdapter:

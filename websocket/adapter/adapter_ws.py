@@ -1,4 +1,4 @@
-from bitget_ws import BitgetWebSocket
+from bitget.bitget_ws import BitgetWebSocket
 
 class WebSocketAdapter:
     def __init__(self, exchange_name, ws_url, proxy_host=None, proxy_port=None, proxy_type=None,

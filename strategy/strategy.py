@@ -1,6 +1,7 @@
 import pandas as pd
 from indicators.macd import Indicators
-from adapter_api import APIAdapter
+from api.adapter.adapter_api import APIAdapter
+from core.event_bus import event_bus
 
 class Strategy:
     """策略类，支持滑动窗口和MACD信号交易"""
@@ -9,7 +10,7 @@ class Strategy:
         self.symbol = symbol
         self.productType = productType
         self.marginCoin = marginCoin
-        
+        self.event_bus = event_bus
         self.window_size = window_size
         self.candles_df = pd.DataFrame()  # 滑动窗口K线数据
 
@@ -23,7 +24,9 @@ class Strategy:
                 self.state = "ordered_short"  # 有一个空单
         print("当前开单状态:" + self.state)
 
-    def run(self, candles):
+        event_bus.on("candle_update", self.on_candle_update)
+
+    def on_candle_update(self, candles):
         """
         WebSocket回调，每次推送新的K线数据
         candles: list[list] 格式的K线数据
