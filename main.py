@@ -1,6 +1,7 @@
-from api.adapter.adapter_api import APIAdapter
-from websocket.adapter.adapter_ws import WebSocketAdapter
+from api.adapter_api import APIAdapter
+from ws.adapter_ws import WebSocketAdapter
 from strategy.strategy import Strategy
+
 # ----------------------
 # 1. 初始化 APIAdapter（完全不关心交易所内部实现）
 # ----------------------
